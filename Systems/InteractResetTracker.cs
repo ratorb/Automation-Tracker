@@ -1,6 +1,5 @@
 ﻿using Kitchen;
 using KitchenTracker.Components;
-using System.Security.Cryptography;
 
 namespace KitchenTracker.Systems
 {

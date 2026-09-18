@@ -22,7 +22,7 @@ namespace KitchenTracker
     {
         public const string NAME = "Automation Tracker";
         public const string GUID = "nova.production-tracker";
-        public const string VERSION = "1.1.0";
+        public const string VERSION = "1.1.2";
 
         public Main() : base(GUID, NAME, "Zoey Davis", VERSION, ">=1.0.0", Assembly.GetExecutingAssembly()) { }
 
@@ -138,7 +138,7 @@ namespace KitchenTracker
             PrefManager = new(GUID, "Automation Tracker");
 
             PrefManager
-                .AddConditionalBlocker(() => Session.CurrentGameNetworkMode != GameNetworkMode.Host || !TrackingController.CanModifyTrackers())
+                .AddConditionalBlocker(() => Session.NetworkedPlayState != Platforms.NetworkedPlayState.Host || !TrackingController.CanModifyTrackers())
                     .AddConditionalBlocker(TrackingController.IsTracking)
                         .AddButton("Enable", TrackingController.EnableTracking)
                     .ConditionalBlockerDone()

@@ -32,11 +32,11 @@ namespace KitchenTracker.Components
         public int TrackedItems;
     }
 
-    public struct CItemTrackerSurrogate : IApplianceProperty, IComponentData, TypeHash.ISurrogate<CItemTracker> // Surrogate
+    /*public struct CItemTrackerSurrogate : IApplianceProperty, IComponentData, TypeHash.ISurrogate<CItemTracker> // Surrogate
     {
         public bool FullHolder;
         public bool DestroyItem;
 
         public IComponentData Convert() => new CItemTracker { DestroyItem = DestroyItem, UpdateAfterCount = 1 };
-    }
+    }*/
 }

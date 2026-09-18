@@ -24,8 +24,6 @@ namespace KitchenTracker.Views
 
         private ViewData Data = default;
 
-        private GameObject Item;
-
         public override void Initialise()
         {
             base.Initialise();

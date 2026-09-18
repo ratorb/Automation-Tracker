@@ -8,7 +8,7 @@ namespace KitchenTracker.Systems
     {
         protected override ViewType ViewType => TrackerIndicator;
 
-        protected override EntityQuery GetSearchQuery()
+        protected override EntityQuery GetCandidateQuery()
         {
             return GetEntityQuery(typeof(CPosition), typeof(CItemTracker), typeof(CItemTrackerID));
         }
